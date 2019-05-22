@@ -50,6 +50,16 @@ all_artists = Artist.view_all()
 artist1.all_albums()
 album2.artist()
 
+album2.genre = "BlueGrass"
+album2.change_details()
+
+artist1.name = "M Smithy"
+artist1.change_details()
+
+album2.delete()
+
+artist2.find(album3.artist_id)
+
 
 binding.pry
 nil
