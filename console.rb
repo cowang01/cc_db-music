@@ -22,6 +22,7 @@ artist2.save()
 album1 = Album.new({
   "title" => "Why, Why, Why",
   "release_date" => 1982,
+  "genre" => "Blues/RnB",
   "artist_id" => artist1.id
   })
 album1.save()
@@ -29,6 +30,7 @@ album1.save()
 album2 = Album.new({
   "title" => "Nope",
   "release_date" => 1988,
+  "genre" => "RnB",
   "artist_id" => artist1.id
   })
 album2.save()
@@ -36,6 +38,7 @@ album2.save()
 album3 = Album.new({
   "title" => "Blue Saturdays",
   "release_date" => 2005,
+  "genre" => "Folk",
   "artist_id" => artist2.id
   })
 album3.save()
