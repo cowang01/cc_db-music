@@ -22,5 +22,18 @@ class Artist
     SqlRunner.run(sql)
   end
 
+  def self.view_all()
+    sql = "SElECT * FROM artist;"
+    artists = SqlRunner.run(sql)
+    return artists.map { |artist| Album.new(artist) }
+  end
+
+  def all_albums()
+    sql = "SELECT * FROM album WHERE artist_id = $1"
+    values = [@id]
+    albums =  SqlRunner.run(sql, values)
+    return albums.map { |album| Album.new(album) }
+  end
+
 
 end

@@ -40,5 +40,13 @@ album3 = Album.new({
   })
 album3.save()
 
+
+all_albums = Album.view_all()
+all_artists = Artist.view_all()
+
+artist1.all_albums()
+album2.artist()
+
+
 binding.pry
 nil
